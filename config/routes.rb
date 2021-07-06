@@ -17,12 +17,12 @@ Rails.application.routes.draw do
   # => GET "restaurants/38"
   get "restaurants/:id", to: "restaurants#show", as: :restaurant
 
-  resources :restaurants do
-    resources :reviews, only: [:new, :create]
-    # GET restaurants/42/reviews/new
-  end
+  # resources :restaurants do
+  #   resources :reviews, only: [:new, :create]
+  #   # GET restaurants/42/reviews/new
+  # end
 
-  resources :reviews, only: [:show]
+  # resources :reviews, only: [:show]
 
   # A visitor can add a new review to a restaurant
   # => GET "restaurants/38/reviews/new" (nested resources)
